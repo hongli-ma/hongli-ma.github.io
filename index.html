@@ -82,6 +82,24 @@
       color: var(--muted);
     }
 
+    .about-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 210px;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .about-content p {
+      margin: 0;
+    }
+
+    .about-wordcloud {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
     .projects {
       display: grid;
       gap: 22px;
@@ -304,6 +322,15 @@
         font-size: 1.85rem;
       }
 
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .about-wordcloud {
+        width: min(280px, 100%);
+        margin: 0 auto;
+      }
+
       .project-summary {
         grid-template-columns: 62px 1fr;
         gap: 12px;
@@ -338,21 +365,29 @@
 
     <section>
       <h2>About</h2>
-      <p>
-        I am currently an Associate Researcher in the School of Mathematics at
-        the Harbin Institute of Technology. Prior to this, I was trained as a
-        postdoc in RNA bioinformatics and machine learning at the
-        <a href="https://lulab.life.tsinghua.edu.cn/home/" target="_blank">Zhi John Lu Lab</a>
-        in Tsinghua University (2 yrs). I obtained my Ph.D. in Mathematics from
-        Shandong University (2 yrs in Financial Mathematics, 2 yrs in
-        bioinfo(sequencing&amp;omics) algorithms), and was a joint Ph.D. student
-        in Computational Biology (molecule structure &amp;interaction modeling)
-        at the University of Toronto, where I was fortunate to be advised by
-        <a href="https://sites.utoronto.ca/zhanglab/" target="_blank">Prof. Zhaolei Zhang</a>
-        (2 yrs). My research interests lie in the computational modeling of
-        biomolecules, with a particular focus on RNA structures, RNA-ligand
-        interactions, and interpretable machine learning.
-      </p>
+      <div class="about-content">
+        <p>
+          I am currently an Associate Researcher in the School of Mathematics at
+          the Harbin Institute of Technology. Prior to this, I was trained as a
+          postdoc in RNA bioinformatics and machine learning at the
+          <a href="https://lulab.life.tsinghua.edu.cn/home/" target="_blank">Zhi John Lu Lab</a>
+          in Tsinghua University (2 yrs). I obtained my Ph.D. in Mathematics from
+          Shandong University (2 yrs in Financial Mathematics, 2 yrs in
+          bioinfo(sequencing&amp;omics) algorithms), and was a joint Ph.D. student
+          in Computational Biology (molecular structure &amp; interactions) at the
+          University of Toronto, where I was fortunate to be advised by
+          <a href="https://sites.utoronto.ca/zhanglab/" target="_blank">Prof. Zhaolei Zhang</a>
+          (2 yrs). My research interests lie in the computational modeling of
+          biomolecules, with a particular focus on RNA structures, RNA-ligand
+          interactions, and interpretable machine learning.
+        </p>
+        <img
+          class="about-wordcloud"
+          src="assets/images/hongli-wordcloud.png"
+          width="210"
+          height="207"
+          alt="Word cloud illustrating Hongli Ma's research interests">
+      </div>
       <!-- Add your current position, institution, and a short biography here. -->
     </section>
 
